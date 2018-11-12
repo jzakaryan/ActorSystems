@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-host",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Application/Application.Orleans.Host/Application.Orleans.Host.csproj",
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-client",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Application/Application.Orleans.Client/Application.Orleans.Client.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

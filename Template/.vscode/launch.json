@@ -1,0 +1,51 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": "Application.Orleans.Host",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-host",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Application/Application.Orleans.Host/bin/Debug/netcoreapp2.1/Application.Orleans.Host.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Application/Application.Orleans.Host",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": "Application.Orleans.Client",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-client",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Application/Application.Orleans.Client/bin/Debug/netcoreapp2.1/Application.Orleans.Client.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Application/Application.Orleans.Client",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ,],
+    "compounds": [
+        {
+            "name": "Debug Host and Client",
+            "configurations": [
+                "Application.Orleans.Host",
+                "Application.Orleans.Client"
+            ]
+        }
+    ]
+}
