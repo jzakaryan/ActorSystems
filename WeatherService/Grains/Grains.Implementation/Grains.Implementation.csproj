@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application.Domain.Model\Application.Domain.Model.csproj" />
-    <ProjectReference Include="..\..\Application.Services\Application.Services.csproj" />
+    <ProjectReference Include="..\..\Application\Application.Domain.Model\Application.Domain.Model.csproj" />
+    <ProjectReference Include="..\..\Application\Application.Services\Application.Services.csproj" />
     <ProjectReference Include="..\Grains.Interfaces\Grains.Interfaces.csproj" />
   </ItemGroup>
 

@@ -96,7 +96,7 @@ namespace Application.Orleans.Client
             {
                 (Location city, Conditions weather) =  await weatherService.FindWeatherDataForCity(userInput);
                 OutputWeather(city, weather);
-                string userInput = Console.ReadLine();
+                userInput = Console.ReadLine();
             }
         }
 
